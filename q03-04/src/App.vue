@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <div></div>
-    <button>Increase Height</button>
-    <button>Increase Width</button>
-    <button>Red Background</button>
-    <button>Blue Background</button>
-    <button>Reset</button>
+    <div v-bind:style="{backgroundColor: bgcolor, height: height + 'px', width: width + 'px'}"></div>
+    <button v-on:click="increaseHeight">Increase Height</button>
+    <button v-on:click="increaseWidth">Increase Width</button>
+    <button v-on:click="switchRed">Red Background</button>
+    <button v-on:click="switchBlue">Blue Background</button>
+    <button v-on:click="reset">Reset</button>
   </div>
 </template>
 
@@ -20,7 +20,23 @@ export default {
     };
   },
   methods:{
-  
+    increaseHeight:function(){
+      this.height += 10;
+    },
+    increaseWidth:function(){
+      this.width += 10;
+    },
+    switchRed:function(){
+      this.bgcolor = 'red'
+    },
+    switchBlue:function(){
+      this.bgcolor = 'blue'
+    },
+    reset:function(){
+      this.bgcolor = 'gray';
+      this.height = 50;
+      this.width = 50;
+    }
   },
   components: {},
 };

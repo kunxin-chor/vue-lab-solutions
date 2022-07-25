@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import App from '@/App.vue'
 
-describe('HelloWorld.vue', () => {
+describe('App.vue', () => {
   it('should change color', async () => {
     const wrapper = shallowMount(App)
     const buttons = wrapper.findAll("button");
