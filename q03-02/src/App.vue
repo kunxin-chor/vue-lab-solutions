@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <div class="box" ></div>
-    <button>Red</button>
-    <button>Green</button>
-    <button>Blue</button>
+    <div class="box" v-bind:style="{backgroundColor:bgcolor}"></div>
+    <button v-on:click="switchRed">Red</button>
+    <button v-on:click="switchGreen">Green</button>
+    <button v-on:click="switchBlue">Blue</button>
   </div>
 </template>
 
@@ -12,6 +12,17 @@ export default {
   name: "App",
   data: function () {
     return { bgcolor: "" };
+  },
+  methods: {
+    switchRed:function(){
+      this.bgcolor = 'red'
+    },
+    switchBlue:function(){
+      this.bgcolor = 'blue'
+    },
+    switchGreen:function(){
+      this.bgcolor = 'green'
+    }
   },
   components: {},
 };

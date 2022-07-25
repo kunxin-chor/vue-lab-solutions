@@ -5,9 +5,19 @@ describe('HelloWorld.vue', () => {
   it('should change color', async () => {
     const wrapper = shallowMount(App)
     const buttons = wrapper.findAll("button");
-    await buttons[0].trigger('click');
-    const div = wrapper.find('div');
-    expect(div.element.style.color).toBe("red")
+    const div = wrapper.findAll('div').at(1);
+
+    await buttons.at(0).trigger('click');
+    expect(div.element.style.backgroundColor).toBe("red")
+        
+    await buttons.at(1).trigger('click');
+    expect(div.element.style.backgroundColor).toBe("green");
+
+    await buttons.at(2).trigger('click');
+    expect(div.element.style.backgroundColor).toBe("blue")
+
+    await buttons.at(1).trigger('click');
+    expect(div.element.style.backgroundColor).toBe("green");
   })
 })
 
