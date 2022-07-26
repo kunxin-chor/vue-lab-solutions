@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <div id="result"></div>
     <input type="text"/>
-    <input type="text"/>
+    <span></span>
   </div>
 </template>
 
@@ -11,10 +10,7 @@
 export default {
   name: 'App',
   data:function(){
-    return {
-      'width': 0,
-      'height': 0
-    }
+    
   },
   components: {
    
