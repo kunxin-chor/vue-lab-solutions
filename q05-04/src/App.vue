@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div id="lights">
+    <div id="lights" v-bind:style="{backgroundColor: lightColor}">
     </div>
-    <input type="radio"/><label>Red</label>
-    <input type="radio"/><label>Green</label>
-    <input type="radio"/><label>Yellow</label>
+    <input type="radio" value="red" v-model="lightColor"/><label>Red</label>
+    <input type="radio" value="green" v-model="lightColor"/><label>Green</label>
+    <input type="radio" value="yellow" v-model="lightColor"/><label>Yellow</label>
   </div>
 </template>
 
@@ -12,6 +12,11 @@
 
 export default {
   name: 'App',
+  data:function() {
+    return {
+      "lightColor":"white"
+    }
+  },
   components: {
    
   }
