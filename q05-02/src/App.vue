@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <div id="result"></div>
-    <input type="text"/>
-    <input type="text"/>
+    <div id="result">{{(parseInt(width)+parseInt(height))*2}}</div>
+    <input type="text" v-model='width'/>
+    <input type="text" v-model='height'/>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <message-box msg="Jack and Jill went up the hill"/>
+    <message-box msg="Mary has a little lamb"/>
   </div>
 </template>
 

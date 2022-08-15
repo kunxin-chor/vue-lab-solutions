@@ -6,7 +6,6 @@ describe('AverageNumber.vue', () => {
     const wrapper = mount(AverageNumber,{
       propsData: { num1: 7, num2: 5 }
     })  
-    const averageNumber = wrapper.findComponent(AverageNumber);
-    expect(averageNumber.find('div').text().toLowerCase()).toMatch("6")
+    expect(wrapper.text().toLowerCase()).toMatch("6")
   })
 })

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <span>Hello World</span>
-    <button>Increase</button>
-    <button>Decrease</button>
+    <span v-bind:style="{fontSize: textSize + 'px'}">Hello World</span>
+    <button v-on:click="increase">Increase</button>
+    <button v-on:click="decrease">Decrease</button>
   </div>
 </template>
 
@@ -13,6 +13,14 @@ export default {
   data:function(){
     return {
       'textSize':12
+    }
+  },
+  methods:{
+    'increase':function(){
+      this.textSize += 5
+    },
+    'decrease':function(){
+      this.textSize -= 5;
     }
   },
   components: {
