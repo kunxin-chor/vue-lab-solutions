@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <input type="text"/>
-    <input type="text"/>
+    <input type="text" v-model="num1"/>
+    <input type="text" v-model="num2"/>
     <div id="results">{{sum}}</div>
   </div>
 </template>
@@ -12,7 +12,8 @@ export default {
   name: 'App',
   data:function(){
     return {
-   
+      num1: 0,
+      num2: 0
     }
   },
   components: { 
@@ -21,7 +22,7 @@ export default {
   },
   computed: {
     sum() {
-      return 0;
+      return parseInt(this.num1) + parseInt(this.num2);
     }
   }
 }
