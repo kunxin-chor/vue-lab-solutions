@@ -7,7 +7,6 @@ describe('App.vue', () => {
     const inputs = wrapper.findAll('input');
     await inputs.at(0).setChecked();
     await inputs.at(1).setChecked();
-    
     expect(wrapper.find('#result').text()).toMatch('2');
   })
 })
